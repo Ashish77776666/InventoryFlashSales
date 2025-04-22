@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>userLogin</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="userLoginStyle.css" />
+</head>
+<body>
+  <div class="login-form-wrap">
+    <div class="login-box">
+      <div class="login-content-warp">
+        <div class="profile-form">
+          <img src="https://res.cloudinary.com/dzeznhbhc/image/upload/v1686724750/samples/cute-fantasy_1_jsf3ic.png" alt="women" />
+          <span class="profile-title" id="registerHeading">user login</span>
+        </div>
+        <!-- Form -->
+        <form id="registerForm">
+          <!-- Name field: visible only in register mode -->
+          <div class="name-input" id="nameField">
+            <span class="email"><i class="fa-regular fa-user"></i></span>
+            <input type="text" id="name" placeholder="Name" />
+          </div>
+          <!-- Email field -->
+          <div class="email-input">
+            <span class="email"><i class="fa-regular fa-envelope"></i></span>
+            <input type="email" id="email" placeholder="email address" />
+          </div>
+          <!-- Password field -->
+          <div class="password-input">
+            <span class="email"><i class="fa-solid fa-lock"></i></span>
+            <input type="password" id="password" placeholder="password" />
+          </div>
+          <!-- Lower links block -->
+          <div class="forget-link-warp" id="createAccount">
+            <div class="checkbox">
+              <input type="checkbox" />
+              <span>keep me signed in</span>
+            </div>
+            <div>
+              <span>forget your password</span><br>
+              <span style="display: block; text-align: center;">Or</span>
+              <span id="createAccrount1" style="display: block; text-align: center; cursor: pointer;">Create Account</span>
+            </div>
+          </div>
+        </form>
+        <!-- Social login -->
+        <div class="social-icon">
+          <a class="social-icon-warp" href="https://www.google.com/">
+            <img src="https://res.cloudinary.com/dzeznhbhc/image/upload/v1686725283/samples/google-plus_1_dbtrqm.png" alt="" />
+            <span>Login google</span>
+          </a>
+        </div>
+        <!-- Button container -->
+        <div class="butn-sign" id="registerBut">
+          <button type="submit" id="loginButton">Log in</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="userLoginScript.js"></script>
+</body>
+</html>

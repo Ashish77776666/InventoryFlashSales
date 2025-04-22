@@ -1,0 +1,63 @@
+1) if you don't want to do login or don't want to show login page , then 
+(
+    This is commonly in the bottom of js code
+    uncomment line no:- 700
+    or 
+    uncomment 
+    this line in, async function renderApp() 
+    document.getElementById("app").innerHTML = html;
+)
+and 
+(   comment 
+    This is commonly in the top of js code
+    let user = null;
+    and this function
+    window.addEventListener("DOMContentLoaded", async () => { })
+
+)
+    
+2) if you want to do login first before using shopPage, then
+(
+    This is commonly in the bottom of js code
+    comment line no:- 700
+    or 
+    comment 
+    this line in, async function renderApp() 
+    document.getElementById("app").innerHTML = html;
+)
+and 
+(
+    This is commonly in the top of js code
+    uncomment 
+    let user = null;
+    and this function
+    window.addEventListener("DOMContentLoaded", async () => { })
+)
+
+3) subscribe to update productQty automaticaly when key expire
+this is nessecary if you use docker to run rdis then run this command in redis(http://localhost:8001/redis-stack/browser) 
+config set notify-keyspace-events Ex
+every time we have to run this we start the redis 
+
+4)
+    const reservedQty = parseInt(await client.get(resKey), 10) || 0;
+    if resKey is  like this  "abce" then reservedQty =0
+    if resKey is like this "10100" then reservedQty = 10100, with base 10.
+
+5) final order may be different, because time limit exceede of another proudct.or if user didn't buy product under limited time
+like if he select one product then it's count started, and if he selecte 2nd product then count started it. 
+
+6)
+Performance: Both commands are O(1) for single operations, but HSET can be slightly slower for large hashes due to field lookups. However, it’s negligible for most use cases.
+Memory: HSET is more memory-efficient for structured data, as it avoids key overhead. For example, storing 100 fields with SET requires 100 keys, while HSET uses one key.
+Scalability: HSET is better for scaling applications with complex data, as seen in your MongoDB and Redis usage in projects.
+Redis Version: HSET supports multiple field-value pairs in one command since Redis 4.0.0. For older versions, use HMSET (now deprecated).
+
+HSET:
+What it does: Stores multiple field-value pairs within a single key, treating the key as a hash (like a lightweight dictionary or JSON object). You can update individual fields without affecting others.
+Use case example: Storing structured data like user profiles, product details, or configuration settings under one key.
+HSET user:1 name "Ashish" age 23 email "ashish777766669@gmail.com"
+HGET user:1 name  # Returns "Ashish"
+HGETALL user:1    # Returns all fields: ["name", "Ashish", "age", "23", "email", "ashish777766669@gmail.com"]
+HINCRBY user:1 age 1  # Increment age to 24
+    

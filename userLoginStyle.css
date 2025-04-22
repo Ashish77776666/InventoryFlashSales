@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .login-form-wrap {
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://res.cloudinary.com/dzeznhbhc/image/upload/v1686724235/samples/bgrond_21-ai_sl0fvv.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .login-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .login-content-warp {
+    padding: 30px;
+    background: #505050d1;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 35px;
+    border-top: 5px solid #dac494;
+  }
+  
+  .profile-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .profile-form img {
+    width: 135px;
+    height: 135px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .profile-title {
+    font-size: 26px;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: #dac494;
+    padding: 20px 0;
+  }
+  
+  .social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 16px;
+    padding: 10px 0;
+  }
+  
+  .social-icon img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .social-icon span {
+    color: #dac494;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .social-icon-warp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    text-decoration: none;
+  }
+  
+  .butn-sign {
+    padding: 20px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .butn-sign button {
+    background-color: #e3d199;
+    color: #2a2a2a;
+    border: none;
+    font-weight: 600;
+    height: 40px;
+    width: 74%;
+    border-radius: 8px;
+    font-size: 16px;
+    text-transform: capitalize;
+    border: 2px solid #d8c491;
+    transition: 1s;
+  }
+  
+  .butn-sign button:hover {
+    background-color: transparent;
+    color: #fffcfc;
+    border: 2px solid #d8c491;
+    cursor: pointer;
+  }
+  
+  form {
+    width: 100%;
+  }
+  
+  .email-input, .name-input, .password-input {
+    margin: 12px 0;
+    position: relative;
+  }
+  
+  .email-input .email, 
+  .name-input .email,
+  .password-input .email {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    color: #7c7c7c;
+  }
+  
+  input {
+    height: 47px;
+    border-radius: 8px;
+    border: none;
+    width: 100%;
+    font-size: 16px;
+    padding-left: 10px;
+  }
+  
+  input:focus-visible {
+    outline: none;
+  }
+  
+  input::placeholder {
+    color: gray;
+  }
+  
+  .forget-link-warp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+  }
+  
+  .forget-link-warp .checkbox {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+  }
+  
+  .forget-link-warp .checkbox input {
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+  }
+  
+  .forget-link-warp span {
+    font-size: 16px;
+    color: #dcdcdc;
+    font-weight: 500;
+  }
+  
+  /* Responsive Styles */
+  @media screen and (max-width:576px) {
+    .login-content-warp {
+      width: 300px;
+    }
+    .profile-form img {
+      width: 80px;
+      height: 80px;
+    }
+    .profile-title {
+      font-size: 22px;
+    }
+    .forget-link-warp span {
+      font-size: 14px;
+    }
+  }
+  
+  @media screen and (max-width:420px) {
+    .login-content-warp {
+      width: 270px;
+    }
+    .forget-link-warp span {
+      font-size: 13px;
+    }
+  }
+  
