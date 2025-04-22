@@ -30,6 +30,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     const res = await fetch(`${url}/api/check-auth`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
+      credentials: "include",
       body: JSON.stringify({name:"hello"})
     });
     if(!res.ok){
@@ -95,6 +96,7 @@ async function ashishQty(value) {
   const response = await fetch(`${url}/api/product/${value}`, {
    method: 'POST',
       headers: { 'Content-Type': 'application/json' },
+    credentials: "include",
       body: JSON.stringify({name:"hello"})
 });
   const data = await response.json();
@@ -106,6 +108,7 @@ async function qtyUpdate(productName, currentQty) {
     const response = await fetch(`${url}/api/qtyUpdate`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
+      credentials: "include",
       body: JSON.stringify({ name: productName, currentQty: currentQty })
     });
     if (!response.ok) {
