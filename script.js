@@ -23,7 +23,12 @@ window.addEventListener("DOMContentLoaded", async () => {
   } catch (err) {
     console.error("Error fetching user:", err);
     // Show banner with default user
+    try{
+    window.location.href = "userLoginIndex.html";
+}
+    catch(error){
     document.getElementById("app").innerHTML = Banner({});
+}
   }
 });
 
