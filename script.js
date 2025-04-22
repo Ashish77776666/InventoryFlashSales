@@ -70,7 +70,10 @@ const cartDetails = [];
 
 async function ashishQty(value) {
   // Example: fetch data from an API
-  const response = await fetch(`${url}/api/product/${value}`);
+  const response = await fetch(`${url}/api/product/${value}`, {
+  method: 'GET',
+  credentials: 'include'
+});
   const data = await response.json();
   return data;
 }
