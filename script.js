@@ -2,7 +2,7 @@
 let user = null;
 window.addEventListener("DOMContentLoaded", async () => {
   try {
-    const res = await fetch("https://7ba6-2409-40e5-113d-4053-a9bf-1392-5cc8-fc44.ngrok-free.app/api/check-auth", {
+    const res = await fetch(`${url}/api/check-auth`, {
       method: "GET",
       headers: { "Content-Type": "application/json" },
       credentials: "include" // Ensures cookie is sent
@@ -70,14 +70,14 @@ const cartDetails = [];
 
 async function ashishQty(value) {
   // Example: fetch data from an API
-  const response = await fetch(`https://7ba6-2409-40e5-113d-4053-a9bf-1392-5cc8-fc44.ngrok-free.app/api/product/${value}`);
+  const response = await fetch(`${url}/api/product/${value}`);
   const data = await response.json();
   return data;
 }
 async function qtyUpdate(productName, currentQty) {
   try {
     // productName= productDetails[productIndex].name
-    const response = await fetch('https://7ba6-2409-40e5-113d-4053-a9bf-1392-5cc8-fc44.ngrok-free.app/api/qtyUpdate', {
+    const response = await fetch(`${url}/api/qtyUpdate`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name: productName, currentQty: currentQty })
@@ -97,7 +97,7 @@ async function qtyUpdate(productName, currentQty) {
 
 async function subToCart(productName, qty = 1) {
   try {
-    const response = await fetch("https://7ba6-2409-40e5-113d-4053-a9bf-1392-5cc8-fc44.ngrok-free.app/api/cart/sub", {
+    const response = await fetch(`${url}/api/cart/sub`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       credentials: "include",
@@ -131,7 +131,7 @@ function transformPurchaseItems(purchasedItems) {
 
 async function finalPurchase() {
   try {
-    const response = await fetch("https://7ba6-2409-40e5-113d-4053-a9bf-1392-5cc8-fc44.ngrok-free.app/api/purchase", {
+    const response = await fetch(`${url}/api/purchase`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       credentials: "include",
@@ -151,7 +151,7 @@ async function finalPurchase() {
 
 async function addToCart(productName, qty = 1) {
   try {
-    const response = await fetch("https://7ba6-2409-40e5-113d-4053-a9bf-1392-5cc8-fc44.ngrok-free.app/api/cart/add", {
+    const response = await fetch(`${url}/api/cart/add`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       credentials: "include",
