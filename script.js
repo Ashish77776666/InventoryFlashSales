@@ -7,6 +7,9 @@ window.addEventListener("DOMContentLoaded", async () => {
       headers: { "Content-Type": "application/json" },
       credentials: "include" // Ensures cookie is sent
     });
+    if(!res.ok){
+      window.location.href = "userLoginIndex.html";
+    }
     const data = await res.json();
     user = data.user;
     // data.user should be the logged-in user's details as stored in session
@@ -16,7 +19,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     // Inject the banner with user data
     document.getElementById("app").innerHTML = Banner(user);
   } catch (err) {
-    window.location.href = "userLoginIndex.html";
+    document.getElementById("app").innerHTML = Banner({});
     console.error("Error fetching user:", err);
   }
 });
