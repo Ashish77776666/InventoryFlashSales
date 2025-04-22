@@ -9,7 +9,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     });
     if (!res.ok) {
       // alert("You must log in first");
-      window.location.href = "./userLoginIndex.html";
+      window.location.href = "userLoginIndex.html";
       // window.location.href = "../userLogin/index.html";
     }
     const data = await res.json();
