@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Login branch
         const email = document.getElementById("email").value;
         const password = document.getElementById("password").value;
-        fetch("https://5d85-2409-40e4-1006-368d-21ff-3f96-1992-4c17.ngrok-free.app/api/login", {
+        fetch(`${url}/api/login`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ email, password }),
