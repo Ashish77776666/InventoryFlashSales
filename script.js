@@ -1,11 +1,36 @@
 
+// let user = null;
+// window.addEventListener("DOMContentLoaded", async () => {
+//   try {
+//     const res = await fetch(`${url}/api/check-auth`, {
+//       method: "GET",
+//       headers: { "Content-Type": "application/json" },
+//       credentials: "include" // Ensures cookie is sent
+//     });
+//     if(!res.ok){
+//       window.location.href = "userLoginIndex.html";
+//     }
+//     const data = await res.json();
+//     user = data.user;
+//     // data.user should be the logged-in user's details as stored in session
+//     console.log(data.user);
+//     // document.getElementById("")
+
+//     // Inject the banner with user data
+//     document.getElementById("app").innerHTML = Banner(user);
+//   } catch (err) {
+//     document.getElementById("app").innerHTML = Banner({});
+//     console.error("Error fetching user:", err);
+//   }
+// });
+
 let user = null;
 window.addEventListener("DOMContentLoaded", async () => {
   try {
     const res = await fetch(`${url}/api/check-auth`, {
-      method: "GET",
-      headers: { "Content-Type": "application/json" },
-      credentials: "include" // Ensures cookie is sent
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({"hello"})
     });
     if(!res.ok){
       window.location.href = "userLoginIndex.html";
@@ -24,34 +49,6 @@ window.addEventListener("DOMContentLoaded", async () => {
   }
 });
 
-// let user = null;
-// window.addEventListener('DOMContentLoaded', async () => {
-//   try {
-//     // const url = 'https://a26f-2409-40e4-1006-368d-6de0-3921-1842-db4f.ngrok-free.app';
-//     const res = await fetch(`${url}/api/check-auth`, {
-//       method: 'GET',
-//       headers: { 'Content-Type': 'application/json' },
-//       credentials: 'include',
-//     });
-
-//     console.log('Response status:', res.status);
-//     console.log('Response headers:', [...res.headers.entries()]);
-
-//     if (!res.ok) {
-//       console.error('Fetch failed with status:', res.status);
-//       window.location.href = '/userLoginIndex.html'; // Ensure absolute path
-//       return;
-//     }
-
-//     const data = await res.json();
-//     user = data.user;
-//     console.log('Logged-in user:', data.user);
-//     document.getElementById('app').innerHTML = Banner(user);
-//   } catch (err) {
-//     console.error('Error fetching user:', err);
-//     window.location.href = '/userLoginIndex.html'; // Redirect on CORS or network errors
-//   }
-// });
 
 const productDetails = [
   {
@@ -96,8 +93,9 @@ const cartDetails = [];
 async function ashishQty(value) {
   // Example: fetch data from an API
   const response = await fetch(`${url}/api/product/${value}`, {
-  method: 'GET',
-  credentials: 'include'
+   method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({"hello"})
 });
   const data = await response.json();
   return data;
