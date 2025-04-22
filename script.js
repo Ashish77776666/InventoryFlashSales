@@ -606,5 +606,5 @@ function OutOfStock(product, handler, value) {
   }
 }
 
-document.getElementById("app").innerHTML = Banner();
+// document.getElementById("app").innerHTML = Banner();
 
