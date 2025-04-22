@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const name = document.getElementById("name").value;
         const email = document.getElementById("email").value;
         const password = document.getElementById("password").value;
-        fetch("https://7ba6-2409-40e5-113d-4053-a9bf-1392-5cc8-fc44.ngrok-free.app/api/register", {
+        fetch("https://5d85-2409-40e4-1006-368d-21ff-3f96-1992-4c17.ngrok-free.app/api/register", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ name, email, password })
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Login branch
         const email = document.getElementById("email").value;
         const password = document.getElementById("password").value;
-        fetch("https://7ba6-2409-40e5-113d-4053-a9bf-1392-5cc8-fc44.ngrok-free.app/api/login", {
+        fetch("https://5d85-2409-40e4-1006-368d-21ff-3f96-1992-4c17.ngrok-free.app/api/login", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ email, password }),
