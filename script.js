@@ -7,12 +7,12 @@ window.addEventListener("DOMContentLoaded", async () => {
       headers: { "Content-Type": "application/json" },
       credentials: "include" // Ensures cookie is sent
     });
-    // console.log("Cookies:", req.cookies);
-    // if (!res.ok) {
-    //   // alert("You must log in first");
-    //   window.location.href = "userLoginIndex.html";
-    //   // window.location.href = "../userLogin/index.html";
-    // }
+    console.log("Cookies:", req.cookies);
+    if (!res.ok) {
+      // alert("You must log in first");
+      window.location.href = "userLoginIndex.html";
+      // window.location.href = "../userLogin/index.html";
+    }
     const data = await res.json();
     user = data.user;
     // data.user should be the logged-in user's details as stored in session
