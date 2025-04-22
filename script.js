@@ -7,7 +7,6 @@ window.addEventListener("DOMContentLoaded", async () => {
       headers: { "Content-Type": "application/json" },
       credentials: "include" // Ensures cookie is sent
     });
-    console.log("Cookies:", req.cookies);
     if (!res.ok) {
       // alert("You must log in first");
       window.location.href = "userLoginIndex.html";
