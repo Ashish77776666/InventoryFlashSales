@@ -28,10 +28,9 @@ let user = null;
 window.addEventListener("DOMContentLoaded", async () => {
   try {
     const res = await fetch(`${url}/api/check-auth`, {
-      method: 'POST',
+      method: 'GET',
       headers: { 'Content-Type': 'application/json' },
       credentials: "include",
-      body: JSON.stringify({name:"hello"})
     });
     if(!res.ok){
       window.location.href = "userLoginIndex.html";
@@ -94,10 +93,9 @@ const cartDetails = [];
 async function ashishQty(value) {
   // Example: fetch data from an API
   const response = await fetch(`${url}/api/product/${value}`, {
-   method: 'POST',
+   method: 'GET',
       headers: { 'Content-Type': 'application/json' },
     credentials: "include",
-      body: JSON.stringify({name:"hello"})
 });
   const data = await response.json();
   return data;
