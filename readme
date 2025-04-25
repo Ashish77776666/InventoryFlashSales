@@ -1,7 +1,6 @@
-
-
-
-
+# Things to do when running code in your laptop
+1) change url in config.js bcz you get every time new url (in free virsion of ngrok) when you restart you ngrok.
+2) run command "config set notify-keyspace-events Ex" in redis cli, it will notify when any key expire
 
 
 
