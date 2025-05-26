@@ -1,3 +1,13 @@
+. EcommerceFlashSale | Backend Developer | GitHub Apr - 2025
+• Technologies: HTML, CSS, JavaScript, Node.js, MongoDB, Redis, Netlify, ngrok.
+• Developed a high-traffic Ecommerce flash sale website with user authentication, real-time inventory management.
+• Implemented session-based authorization for secure user logins and access control.
+• Utilized Redis for real-time quantity updates, ensuring accurate inventory during flash sales.
+• Integrated MongoDB to store user data and transaction records, enhancing data scalability.
+• Deployed on Netlify for fast load times and global reach & used ngrok for secure backend and tunneling during development and testing.
+
+
+
 # Things to do when running code in your laptop
 1) change url in config.js bcz you get every time new url (in free virsion of ngrok) when you restart you ngrok.
 2) run command "config set notify-keyspace-events Ex" in redis cli, it will notify when any key expire
